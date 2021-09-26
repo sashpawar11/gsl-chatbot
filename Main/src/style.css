@@ -1,0 +1,103 @@
+body
+{
+	margin: 0 auto;
+	background-color: #999999;
+}
+
+.bot_window {
+
+height: 500px;
+width: 300px;
+left: 10%;
+top: 5%;
+position: fixed;
+background-color: white;
+border: 2px solid rgb(37,64,97);
+display: block;
+
+}
+#chatwindow_title
+{
+font-family: "Tahoma";
+color: white;
+margin-left: 10px;
+margin-top: 10%;
+}
+.chatBox {
+
+height: 400px;
+width: 290px;
+margin-top: 2.5%;
+margin-left: 5px;
+position: fixed;
+background-color: rgb(240,240,240);
+}
+
+.input_box {
+
+height: 30px;
+width: 230px;
+margin-top: 33%;
+margin-left: 10px;
+position: fixed;
+background-color: rgb(220,230,242);
+border-radius: 10px;
+}
+
+.ctrl_window {
+
+height: 30px;
+width: 296px;
+position: fixed;
+background-color: rgb(79,129,255);
+
+
+}
+.send_btn {
+color: white;
+height: 30px;
+width: wrap-content;
+padding-left: 6px;
+margin-left: 19%;
+margin-top: 33%;
+position : fixed;
+background-color: rgb(79,129,255);
+border-radius:10px;
+}
+
+.msgBox {
+font-family: "Tahoma";
+font-size: 10pt;
+color: rgb(48,80,122);
+height: wrap-content;
+padding: 3%;
+width: 200;
+margin-left:2%;
+margin-bottom: 10%;
+background-color: rgb(185,205,229);
+border-radius: 10px;
+
+}
+
+.msg_container
+{
+	display: inline;
+
+}
+.avatar {
+
+	height: 50px;
+	width: 50px;
+	background-color: rgb(79,129,255);
+	border-radius: 100px;
+	
+	
+	
+}
+.close
+{
+position: absolute;
+margin-left: 90%;
+}
+
+
