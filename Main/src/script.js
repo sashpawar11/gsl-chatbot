@@ -6,15 +6,24 @@ $(document).ready(function(){
         $(".form").append($msg);
         $("#data").val('');
         
-        // start ajax code
+        // Ajax code
         $.ajax({
             url: 'sendmsg.php',
-            type: 'POST',
+            // url: 'sendmsg.php',
+            method: 'POST',
+            headers: {
+                'Access-Control-Allow-Headers': 'POST',
+                // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+                // 'Access-Control-Allow-Credentials': 'true',
+                // // header('Access-Control-Max-Age:86400');
+                // 'Access-Control-Allow-Headers' :' Origin, Content-Type, X-Auth-Token,  Accept, Authorization, X-Requested-With',
+                'Access-Control-Allow-Origin': '*'
+                
+             },
             data: 'text='+$value,
             success: function(result){
                 $reply = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
                 $(".form").append($reply);
-                // when chat goes down the scroll bar automatically comes to the bottom
                 $(".form").scrollTop($(".form")[0].scrollHeight);
             }
             
