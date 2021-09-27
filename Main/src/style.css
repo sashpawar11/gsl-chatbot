@@ -1,103 +1,160 @@
-body
-{
-	margin: 0 auto;
-	background-color: #999999;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
 }
 
-.bot_window {
-
-height: 500px;
-width: 300px;
-left: 10%;
-top: 5%;
-position: fixed;
-background-color: white;
-border: 2px solid rgb(37,64,97);
-display: block;
-
-}
-#chatwindow_title
-{
-font-family: "Tahoma";
-color: white;
-margin-left: 10px;
-margin-top: 10%;
-}
-.chatBox {
-
-height: 400px;
-width: 290px;
-margin-top: 2.5%;
-margin-left: 5px;
-position: fixed;
-background-color: rgb(240,240,240);
+::selection{
+    color: #fff;
+    background: #8400ff;
 }
 
-.input_box {
-
-height: 30px;
-width: 230px;
-margin-top: 33%;
-margin-left: 10px;
-position: fixed;
-background-color: rgb(220,230,242);
-border-radius: 10px;
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ddd;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ccc;
 }
 
-.ctrl_window {
-
-height: 30px;
-width: 296px;
-position: fixed;
-background-color: rgb(79,129,255);
-
-
+.wrapper{
+    width: 370px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-top: 0px;
+	display: none;
 }
-.send_btn {
-color: white;
-height: 30px;
-width: wrap-content;
-padding-left: 6px;
-margin-left: 19%;
-margin-top: 33%;
-position : fixed;
-background-color: rgb(79,129,255);
-border-radius:10px;
+.wrapper .title{
+    background: #8400ff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid #8400ff;
+    border-radius: 5px 5px 0 0;
+}
+.wrapper .form{
+    padding: 20px 15px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.wrapper .form .inbox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+.wrapper .form .user-inbox{
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+.wrapper .form .inbox .icon{
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    background: #8400ff;
+}
+.wrapper .form .inbox .msg-header{
+    max-width: 53%;
+    margin-left: 10px;
+}
+.form .inbox .msg-header p{
+    color: #fff;
+    background: #8400ff;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 14px;
+    word-break: break-all;
+}
+.form .user-inbox .msg-header p{
+    color: #333;
+    background: #efefef;
+}
+.wrapper .typing-field{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #efefef;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 5px 5px;
+}
+.wrapper .typing-field .input-data{
+    height: 40px;
+    width: 335px;
+    position: relative;
+}
+.wrapper .typing-field .input-data input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0 80px 0 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+.typing-field .input-data input:focus{
+    border-color: #c280ff;
+}
+.input-data input::placeholder{
+    color: #999999;
+    transition: all 0.3s ease;
+}
+.input-data input:focus::placeholder{
+    color: #bfbfbf;
+}
+.wrapper .typing-field .input-data button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 30px;
+    width: 40px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    background: #8400ff;
+    border: 1px solid #c280ff;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+	text-align: center;
+}
+.wrapper .typing-field .input-data input:valid ~ button{
+    opacity: 1;
+    pointer-events: auto;
+}
+.typing-field .input-data button:hover{
+    background: #006fef;
 }
 
-.msgBox {
-font-family: "Tahoma";
-font-size: 10pt;
-color: rgb(48,80,122);
-height: wrap-content;
-padding: 3%;
-width: 200;
-margin-left:2%;
-margin-bottom: 10%;
-background-color: rgb(185,205,229);
-border-radius: 10px;
-
+#chatbtn {
+	background:#8400ff;
 }
-
-.msg_container
-{
-	display: inline;
-
+#botmsg {
+	visibility: hidden;
 }
-.avatar {
-
-	height: 50px;
-	width: 50px;
-	background-color: rgb(79,129,255);
-	border-radius: 100px;
-	
-	
-	
-}
-.close
-{
-position: absolute;
-margin-left: 90%;
-}
-
-
