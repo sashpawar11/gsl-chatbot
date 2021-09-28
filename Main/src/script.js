@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+
+    TODO : 'TIMESTAMP FOR POSTS'
+    // var curr_time = new Date();
+    // var timestamp = curr_time.getHours + ":" + curr_time.getMinutes;
+    // document.write(datetime);
+
+
+
    var chatwindow = document.getElementsByClassName("wrapper")[0];
     $("#send-btn").on("click", function(){
         $value = $("#data").val();
@@ -23,7 +32,7 @@ $(document).ready(function(){
              },
             data: 'text='+$value,
             success: function(result){
-                $reply = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
+                $reply = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-robot"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
                 $(".form").append($reply);
                 $(".form").scrollTop($(".form")[0].scrollHeight);
             }
@@ -96,11 +105,17 @@ $(document).ready(function(){
     // Delay for displaying Message1
     setTimeout(function(){
         document.getElementById('botmsg').style.visibility = "visible";
-        },1500);
+        },3500);
 
-        // Delay for displaying Message2
+
+        // Delay for displaying Options
     setTimeout(function(){
         document.getElementById('opt_inbox').style.visibility = "visible";
         },2500);
+       
+    // msgload anim dissapear delay    
+    $('.loader').delay(3200).fadeOut();
+
+
 });
 

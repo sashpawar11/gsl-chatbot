@@ -15,7 +15,12 @@ if(mysqli_num_rows($execute_query) > 0){
     echo $reply;
 }else{ 
 
-    echo "Sorry, i am unable to understand your query.";
+        // When a user will ask a question which the bot cannot answer,
+        // it will store it in a seperate datatable called newqueries.
+        // so that later the bot can be trained to answer that question.
+    $insert_query = "INSERT INTO newqueries (que) VALUES('$getAns')";
+    $run_query = mysqli_query($conn, $insert_query) or die("Error while inserting into database!");
+    echo "Sorry, I'm not able to understand your query.";
 }
 
 
