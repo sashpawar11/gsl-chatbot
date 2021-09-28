@@ -163,6 +163,7 @@ html,body{
     right: 6px;
 	background:#8400ff;
     border-radius: 400px;
+    border-color: #c280ff;
 }
 #botmsg {
 	visibility: hidden;
@@ -208,5 +209,10 @@ html,body{
     position: absolute;
     right: 10px;
     top: 7px;
-    background-color:#c280ff;
+    /* right:0;
+    top:0; */
+    background-color: transparent;
+    /* background-color:#c280ff; */
+    border:none;
+    
 }
