@@ -121,7 +121,7 @@ html,body{
     transition: all 0.3s ease;
 }
 .typing-field .input-data input:focus{
-    border-color: #c280ff;
+    border-color: #3D56B2;
 }
 .input-data input::placeholder{
     color: #999999;
@@ -144,7 +144,7 @@ html,body{
     pointer-events: none;
     border-radius: 3px;
     background: #3D56B2;
-    border: 1px solid #c280ff;
+    border: 1px solid #3D56B2;
     transform: translateY(-50%);
     transition: all 0.3s ease;
 	text-align: center;
@@ -192,8 +192,8 @@ html,body{
 }
 .hero-banner .btn-primary {
     color: #2f2f41;
-    background-color: #c280ff;
-    border-color: #01a479;
+    background-color: #5C7AEA;
+    border-color: #5C7AEA;
 }
 .hero-banner .btn:before {
     content: "";
