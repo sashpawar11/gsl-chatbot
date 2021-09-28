@@ -1,7 +1,7 @@
 $(document).ready(function(){
    var chatwindow = document.getElementsByClassName("wrapper")[0];
     $("#send-btn").on("click", function(){
-        $value = $("#data").val().toLowerCase();
+        $value = $("#data").val();
         $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>'+ $value +'</p></div></div>';
         $(".form").append($msg);
         $("#data").val('');
@@ -12,7 +12,8 @@ $(document).ready(function(){
             // url: 'sendmsg.php',
             method: 'POST',
             headers: {
-                'Access-Control-Allow-Headers': 'POST',
+                "Access-Control-Allow-Methods" : "OPTIONS, GET, POST, PUT, DELETE",
+                // 'Access-Control-Allow-Headers': 'POST',
                 // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
                 // 'Access-Control-Allow-Credentials': 'true',
                 // // header('Access-Control-Max-Age:86400');
@@ -32,14 +33,36 @@ $(document).ready(function(){
 
     $("#chatbtn").on("click", function()
     {
+        $( ".wrapper" ).animate({
+            opacity: 1,
+            // top: "+=0",
+            height: "toggle",
+            width: "toggle",
+          }, 100, function() {
+            
+          });
         // ​$('.wrapper').css('display'​​​​​​​​​​​​​​​​​​​​​​​​​​​,'block');​​​​​​
     chatwindow.style.display="block";
     document.getElementById("chatbtn").style.display = "none";
     });
 
+    $("#btn_close").on("click", function()
+    {
+        $( ".wrapper" ).animate({
+            opacity: 0,
+            // top: "+=0",
+            height: "toggle",
+            width: "toggle",
+          }, 100, function() {
+            
+          });
+        // ​$('.wrapper').css('display'​​​​​​​​​​​​​​​​​​​​​​​​​​​,'block');​​​​​​
+    //chatwindow.style.display="none";
+    document.getElementById("chatbtn").style.display = "block";
+    });
     // Delay for displaying Message
     setTimeout(function(){
         document.getElementById('botmsg').style.visibility = "visible";
-        },1000);
+        },1500);
 });
 

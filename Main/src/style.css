@@ -6,9 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 html,body{
-    display: grid;
+    /* display: grid; */
     height: 100%;
-    place-items: center;
+    /* place-items: center; */
+    
 }
 
 ::selection{
@@ -31,27 +32,31 @@ html,body{
 }
 
 .wrapper{
-    width: 370px;
+    width: 360px;
     background: #fff;
     border-radius: 5px;
     border: 1px solid lightgrey;
     border-top: 0px;
 	display: none;
+    position: fixed;
+    bottom: 4px;
+    right: 6px;
 }
 .wrapper .title{
+    padding-left: 20px;
     background: #8400ff;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 60px;
-    text-align: center;
+    line-height: 45px;
+    text-align: left;
     border-bottom: 1px solid #8400ff;
     border-radius: 5px 5px 0 0;
 }
 .wrapper .form{
     padding: 20px 15px;
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 350px;
+    max-height: 350px;
     overflow-y: auto;
 }
 .wrapper .form .inbox{
@@ -149,12 +154,59 @@ html,body{
     pointer-events: auto;
 }
 .typing-field .input-data button:hover{
-    background: #006fef;
+    background: #c280ff;
 }
 
 #chatbtn {
+    position: fixed;
+    bottom: 4px;
+    right: 6px;
 	background:#8400ff;
+    border-radius: 400px;
 }
 #botmsg {
 	visibility: hidden;
+}
+
+
+
+/* Hero Banner */
+.hero-banner h1 {
+    font-size: 48px;
+}
+.hero-banner .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+.hero-banner .btn-primary {
+    color: #2f2f41;
+    background-color: #c280ff;
+    border-color: #01a479;
+}
+.hero-banner .btn:before {
+    content: "";
+    background: #8400ff;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.hero-banner .btn:hover:before {
+    width: 100%;
+}
+
+#btn_close {
+
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    background-color:#c280ff;
 }
