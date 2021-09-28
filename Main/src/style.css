@@ -214,5 +214,10 @@ html,body{
     background-color: transparent;
     /* background-color:#c280ff; */
     border:none;
+    transition-duration: 0.5s;
     
+}
+#btn_close:hover{
+    background-color:#c280ff;
+    color:black;
 }
