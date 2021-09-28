@@ -14,7 +14,7 @@ html,body{
 
 ::selection{
     color: #fff;
-    background: #8400ff;
+    background: #3D56B2;
 }
 
 ::-webkit-scrollbar{
@@ -44,13 +44,13 @@ html,body{
 }
 .wrapper .title{
     padding-left: 20px;
-    background: #8400ff;
+    background: #14279B;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     line-height: 45px;
     text-align: left;
-    border-bottom: 1px solid #8400ff;
+    border-bottom: 1px solid #3D56B2;
     border-radius: 5px 5px 0 0;
 }
 .wrapper .form{
@@ -76,7 +76,7 @@ html,body{
     line-height: 40px;
     border-radius: 50%;
     font-size: 18px;
-    background: #8400ff;
+    background: #3D56B2;
 }
 .wrapper .form .inbox .msg-header{
     max-width: 53%;
@@ -84,7 +84,7 @@ html,body{
 }
 .form .inbox .msg-header p{
     color: #fff;
-    background: #8400ff;
+    background: #3D56B2;
     border-radius: 10px;
     padding: 8px 10px;
     font-size: 14px;
@@ -143,7 +143,7 @@ html,body{
     opacity: 0;
     pointer-events: none;
     border-radius: 3px;
-    background: #8400ff;
+    background: #3D56B2;
     border: 1px solid #c280ff;
     transform: translateY(-50%);
     transition: all 0.3s ease;
@@ -154,19 +154,29 @@ html,body{
     pointer-events: auto;
 }
 .typing-field .input-data button:hover{
-    background: #c280ff;
+    background: #5C7AEA;
 }
 
 #chatbtn {
     position: fixed;
     bottom: 4px;
     right: 6px;
-	background:#8400ff;
+	background:#3D56B2;
     border-radius: 400px;
-    border-color: #c280ff;
+    border-color: #5C7AEA;
 }
-#botmsg {
+#botmsg, #opt_inbox {
 	visibility: hidden;
+}
+
+.form .inbox .options p{
+    color: white;
+    background: black;
+    border-radius: 30px;
+    padding: 8px 10px;
+    font-size: 14px;
+    word-break: break-all;
+    cursor: pointer;
 }
 
 
@@ -187,7 +197,7 @@ html,body{
 }
 .hero-banner .btn:before {
     content: "";
-    background: #8400ff;
+    background: #3D56B2;
     width: 4px;
     height: 100%;
     position: absolute;
@@ -218,6 +228,6 @@ html,body{
     
 }
 #btn_close:hover{
-    background-color:#c280ff;
+    background-color:#5C7AEA;
     color:black;
 }
