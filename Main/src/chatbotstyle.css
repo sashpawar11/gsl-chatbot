@@ -63,6 +63,7 @@
     padding: 8px 10px;
     font-size: 14px;
     word-break: break-all;
+    
 }
 .form .user-inbox .msg-header p{
     color: #333;
@@ -144,11 +145,12 @@
 }
 
 .form .inbox .options p{
-    color: white;
-    background: black;
+    color: #149b89;
+    background: none;
+    border: solid 2px #149b89;
     border-radius: 30px;
     padding: 8px 10px;
-    font-size: 14px;
+    font-size: 12px;
     word-break: break-all;
     cursor: pointer;
 }
@@ -170,6 +172,27 @@
     background-color:#5C7AEA;
     color:black;
 }
+
+.form .inbox .timestamp p{
+
+    padding-top: 10px;
+    margin-left: 5px;
+    font-size: 10pt;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Chatmessage loading animation */
 .loader,
