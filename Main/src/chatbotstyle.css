@@ -154,6 +154,11 @@
     word-break: break-all;
     cursor: pointer;
 }
+.form .inbox .options p:hover{
+    background-color:#5C7AEA;
+    color:white;
+    border-color: #14279B;
+}
 
 #btn_close {
 
