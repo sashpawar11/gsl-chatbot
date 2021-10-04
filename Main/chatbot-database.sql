@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2021 at 08:49 AM
+-- Generation Time: Oct 04, 2021 at 12:51 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -24,15 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contactdetails`
+-- Table structure for table `department_details`
 --
 
-CREATE TABLE `contactdetails` (
-  `ID` int(11) NOT NULL,
-  `dept_name` varchar(255) NOT NULL,
-  `dept_email` varchar(255) NOT NULL,
+CREATE TABLE `department_details` (
+  `opt_id` int(11) NOT NULL,
+  `dept_name` varchar(100) NOT NULL,
+  `dept_email` text NOT NULL,
   `dept_phone` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `department_details`
+--
+
+INSERT INTO `department_details` (`opt_id`, `dept_name`, `dept_email`, `dept_phone`) VALUES
+(1, 'IT-ERP', 'it.erp@goashipyard.in', 250252),
+(2, 'IT-EDP', 'it.edp@goashipyard.com', 2516913),
+(3, 'Ship Repair', 'ship.repair@goashipyard.com', 2512568);
 
 -- --------------------------------------------------------
 
@@ -53,17 +62,44 @@ CREATE TABLE `knowledge_base` (
 INSERT INTO `knowledge_base` (`id`, `questions`, `answers`) VALUES
 (1, 'Hello', 'Hi!'),
 (2, 'What is your name?', 'My name is GSL-chatbot'),
-(3, 'Hi', 'Hello!');
+(3, 'Hi', 'Hello!'),
+(4, 'Thanks|Thank you|Thankyou', 'It was great helping you, goodbye user!');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newqueries`
+--
+
+CREATE TABLE `newqueries` (
+  `ID` int(11) NOT NULL,
+  `que` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `newqueries`
+--
+
+INSERT INTO `newqueries` (`ID`, `que`) VALUES
+(7, 'What is your name '),
+(9, 'What is your age'),
+(16, 'Hello '),
+(17, 'What is your name!'),
+(19, 'fqf'),
+(20, 'cvv'),
+(21, 'Hrllo'),
+(22, 'What is your name!'),
+(23, 'Hello');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `contactdetails`
+-- Indexes for table `department_details`
 --
-ALTER TABLE `contactdetails`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `department_details`
+  ADD PRIMARY KEY (`opt_id`);
 
 --
 -- Indexes for table `knowledge_base`
@@ -72,20 +108,26 @@ ALTER TABLE `knowledge_base`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `newqueries`
 --
+ALTER TABLE `newqueries`
+  ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT for table `contactdetails`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `contactdetails`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `knowledge_base`
 --
 ALTER TABLE `knowledge_base`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `newqueries`
+--
+ALTER TABLE `newqueries`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

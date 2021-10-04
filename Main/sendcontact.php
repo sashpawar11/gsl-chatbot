@@ -22,6 +22,7 @@ if(mysqli_num_rows($execute_query) > 0){
              Department Email:<br>{$fetch_data['dept_email']}<br>
             Department Phone:<br>{$fetch_data['dept_phone']}<br></p>
         </div>
+        <div class='timestamps'><p class='msg_time'>0:00</p></div>
     </div>";
 
    //echo $reply;

@@ -24,7 +24,7 @@ Index.html -->
 	<div class="title">
 		<div class="container controls">
 			<div class="row">
-				<div class="col-6"><span>GSL Chatbot</span></div>
+				<div class="col-sm-6"><span>GSL Chatbot</span></div>
 				<div class="col-sm"><button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Minimize" id="minbtn"><img src="img/minimize-ico.png" width="24" height="24"/></button></div>
 				<div class="col-sm">
 					<button type="button" class="btn btn-primary btn-sm controlBtns" id="maxbtn" aria-label="Maximize"><img src="img/fullsceen-ico.png" width="24" height="24"/></button>
@@ -45,11 +45,10 @@ Index.html -->
 				<div class="msg-header">
 					<p id="greet">How can i help you?</p>
 				</div>
-				<!-- <div class="timestamp">
-				<p id="msg_time">0:00</p>
-				</div> -->
-
-		</div>
+				<div class="timestamps">
+				<p class="msg_time">0:00</p>
+				</div>
+			</div>
 
 		<!-- Choices -->
 		<div class="bot-inbox inbox opt_inbox" >
@@ -76,7 +75,7 @@ Index.html -->
 	</div>
 	<div class="typing-field">
 		<div class="input-data">
-			<input id="data" type="text" placeholder="Type your message here.." required>
+			<input id="data" type="text" autocomplete="off" placeholder="Type your message here.." required>
 			<button id="send-btn"><i class="fa fa-send" ></i></button>
 		</div>
 	</div>
@@ -112,7 +111,7 @@ Index.html -->
 	  <section class="hero-banner bg-light py-5" >
 		<div class="container">
 			<div class="row row align-items-center">
-				<div class="col-lg-5 offset-lg-1 order-lg-1 p">
+				<div class="col-lg-5 offset-lg-1 order-lg-1 d-flex justify-content-center" style="align-items: flex-end;">
 					<img src="img/gsl-logo.png" class="img-fluid" alt="gslchatbot" height="500px" width="300px">
 				</div>
 				<div class="col-lg-6">
