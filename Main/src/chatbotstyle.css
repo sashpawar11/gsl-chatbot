@@ -15,6 +15,7 @@
     position: fixed;
     bottom: 4px;
     right: 6px;
+    z-index: 6;
 }
 .wrapper .title{
     padding-left: 20px;
@@ -140,8 +141,11 @@
     border-radius: 400px;
     border-color: #5C7AEA;
 }
-#botmsg, #opt_inbox {
+#botmsg{
 	visibility: hidden;
+}
+.opt_inbox{
+    visibility: hidden;
 }
 
 .form .inbox .options p{
@@ -154,29 +158,46 @@
     word-break: break-all;
     cursor: pointer;
 }
+
+#location p{
+    border-color: #9b141f;
+    color: #9b141f;
+}
+#location p:hover{
+    background-color:#5C7AEA;
+    color:white;
+    border-color: #14279B;
+}
 .form .inbox .options p:hover{
     background-color:#5C7AEA;
     color:white;
     border-color: #14279B;
 }
 
-#btn_close {
-
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    /* right:0;
-    top:0; */
+.controlBtns{
     background-color: transparent;
-    /* background-color:#c280ff; */
     border:none;
     transition-duration: 0.5s;
-    
+
 }
-#btn_close:hover{
+#maxbtn{
+    display: inline-block;
+}
+#minbtn{
+
+    display: none;
+
+}
+
+.container .controls{
+
+    align-items: center;
+}
+.controlBtns:hover{
     background-color:#5C7AEA;
     color:black;
 }
+
 
 .form .inbox .timestamp p{
 
