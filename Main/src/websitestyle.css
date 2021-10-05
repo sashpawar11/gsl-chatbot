@@ -10,6 +10,7 @@ html,body{
     height: 100%;
     /* place-items: center; */
     background-color: #03061a;
+    overflow:auto;
     
 }
 

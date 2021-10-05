@@ -145,7 +145,7 @@ $(document).ready(function(){
     $('#query').on("click", function(){
 
         $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>Other Queries</p></div><div class="timestamps"><i class="fa fa-check-double m-1" style="font-size:8pt; color:#5C7AEA;"></i></div></div>';
-        $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header"><p>Please state your query.</p></div></div>';
+        $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header"><p>Please state your query.</p></div><div class="timestamps"><p class="msg_time">0:00</p></div></div>';
         i++;
         getLoaderAnimation($msg,$reply);
         setTimeout(function(){
@@ -189,10 +189,28 @@ $(document).ready(function(){
         // ​$('.wrapper').css('display'​​​​​​​​​​​​​​​​​​​​​​​​​​​,'block');​​​​​​
     //chatwindow.style.display="none";
     document.getElementById("chatbtn").style.display = "block";
-    // setTimeout(function(){ location.reload(); }, 10);   // Add this to refresh the page on clicking close, does not save the conversation.
+    document.body.style.overflow = 'auto';
+    setTimeout(function(){ location.reload(); }, 10);   // Add this to refresh the page on clicking close, does not save the conversation.
     });
 
-
+    $("#collapseBtn").on("click", function()
+    {
+        $( ".wrapper" ).animate({
+            opacity: 1,
+            // top: "+=0",
+            height: "6%",
+           
+          }, 100, function() {
+            
+          });
+        // ​$('.wrapper').css('display'​​​​​​​​​​​​​​​​​​​​​​​​​​​,'block');​​​​​​
+    //chatwindow.style.display="none";
+    $("#collapseBtn").style.visibility= "hidden";
+    $("#restore_collapseBtn").style.visibility = "visible";
+    document.getElementById("chatbtn").style.display = "block";
+    document.body.style.overflow = 'auto';
+    
+    });
     $("#maxbtn").on("click", function(){
 
         var maxminheight = (h-120) + 'px';
@@ -213,6 +231,7 @@ $(document).ready(function(){
           $(this).css('display', 'none');
           $("#minbtn").css('display', 'inline-block');
           $(".input-data").css('width','600px');
+          document.body.style.overflow = 'hidden'; // Locking Body Scroll
          
 
     });
@@ -238,7 +257,7 @@ $(document).ready(function(){
           $(".form").css('min-height' ,'350px');
           $(".form").css('max-height' ,'350px');
           $(".input-data").css('width','335px');
-
+          document.body.style.overflow = 'auto';
     });
 
 
@@ -334,5 +353,5 @@ function autoResizeWrapper()
 function playMsgSound()
 {
 
-    document.getElementById("msg_notif").play();
+    // document.getElementById("msg_notif").play();
 }
