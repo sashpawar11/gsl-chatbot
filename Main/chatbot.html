@@ -20,16 +20,19 @@ Index.html -->
 
 <body>
 <!-- CHATBOT CODE -->
+<audio id="msg_notif" src="sound/msgsound.mp3" preload="auto" ></audio> // Message Notification Sound
 <div class="wrapper">
 	<div class="title">
 		<div class="container controls">
 			<div class="row">
-				<div class="col-sm-6"><span>GSL Chatbot</span></div>
-				<div class="col-sm"><button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Minimize" id="minbtn"><img src="img/minimize-ico.png" width="24" height="24"/></button></div>
-				<div class="col-sm">
+				<div class="col-8">
+					<img class="" src="img/botonlineimg.png" width="127" height="46">
+				</div>
+				<div class="col">
+					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Minimize" id="minbtn"><img src="img/minimize-ico.png" width="24" height="24"/></button>
 					<button type="button" class="btn btn-primary btn-sm controlBtns" id="maxbtn" aria-label="Maximize"><img src="img/fullsceen-ico.png" width="24" height="24"/></button>
 				</div>
-				<div class="col-sm"><button type="button" class="btn btn-primary btn-sm controlBtns" id="btn_close" aria-label="Close"><i class="fa fa-times"></i></button></div>
+				<div class="col"><button type="button" class="btn btn-primary btn-sm controlBtns" id="btn_close" aria-label="Close"><i class="fa fa-times"></i></button></div>
 				
 			</div>
 		</div>
@@ -37,10 +40,12 @@ Index.html -->
 	
 		
 	<div class="form">
+		
 		<div class="loader"></div>
 			<div class="bot-inbox inbox" id="botmsg" >
 				<div class="icon">
-					<i class="fas fa-robot"></i>
+					<img src="img/bot.png" width="24" height="24">
+					<!-- <i class="fas fa-robot"></i> -->
 				</div>
 				<div class="msg-header">
 					<p id="greet">How can i help you?</p>
@@ -68,6 +73,9 @@ Index.html -->
 			</div>
 			<div class="options m-2" id="location">
 				<p><b>Location</b></p>
+			</div>
+			<div class="options m-2" id="query">
+				<p><b>Other Queries</b></p>
 			</div>
 			
 		</div>
@@ -116,7 +124,9 @@ Index.html -->
 				</div>
 				<div class="col-lg-6">
 					<h1 class="mt-3" style="color: #14279B; ">GSL-Chatbot</h1>
-					<p class="lead text-secondary my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p class="lead text-secondary my-5">Goa Shipyard Limited
+						(A Government of India Undertaking – Ministry of Defence)
+						GSL is situated on the banks of the River Zuari, 2 miles off Mormugao Port, on the west coast of India. It is barely 400 km. south of Mumbai, right on course of the strategic Suez-Singapore sea route. GSL is well connected by air, rail and road to all major destinations in India.</p>
 					<a href="#" class="btn btn-outline-secondary btn-lg border" style="z-index: 0;">Test Now</a>
 					
 				</div>
@@ -154,25 +164,25 @@ Index.html -->
 		  <div class="col-md-6 col-lg-7 text-center text-md-right">
   
 			<!-- Facebook -->
-			<a class="fb-ic">
+			<a class="fb-ic" href="https://www.facebook.com/pages/category/Government-Organization/Goa-Shipyard-Ltd-1974924416111916/">
 			  <i class="fab fa-facebook-f white-text mr-4"> </i>
 			</a>
 			<!-- Twitter -->
-			<a class="tw-ic">
+			<a class="tw-ic" href="https://twitter.com/goashipyardltd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
 			  <i class="fab fa-twitter white-text mr-4"> </i>
 			</a>
-			<!-- Google +-->
+			<!-- Google +
 			<a class="gplus-ic">
 			  <i class="fab fa-google-plus-g white-text mr-4"> </i>
-			</a>
+			</a> -->
 			<!--Linkedin -->
-			<a class="li-ic">
+			<a class="li-ic" href="https://www.linkedin.com/company/goa-shipyard-limited">
 			  <i class="fab fa-linkedin-in white-text mr-4"> </i>
 			</a>
-			<!--Instagram-->
+			<!-- Instagram
 			<a class="ins-ic">
 			  <i class="fab fa-instagram white-text"> </i>
-			</a>
+			</a> -->
   
 		  </div>
 		  <!-- Grid column -->
@@ -252,7 +262,6 @@ Index.html -->
 	<!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
 	  
 	</div> -->
-	<!-- Copyright -->
   
   </footer>
   <!-- Footer -->
