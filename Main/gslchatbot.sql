@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2021 at 07:24 AM
+-- Generation Time: Oct 08, 2021 at 09:01 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -69,6 +69,18 @@ INSERT INTO `knowledge_base` (`id`, `questions`, `answers`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `navigation`
+--
+
+CREATE TABLE `navigation` (
+  `opt_id` int(11) NOT NULL,
+  `header` varchar(200) NOT NULL,
+  `link` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `newqueries`
 --
 
@@ -101,6 +113,12 @@ ALTER TABLE `department_details`
 --
 ALTER TABLE `knowledge_base`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `navigation`
+--
+ALTER TABLE `navigation`
+  ADD PRIMARY KEY (`opt_id`);
 
 --
 -- Indexes for table `newqueries`

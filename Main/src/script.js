@@ -173,7 +173,7 @@ $(document).ready(function(){
     $("#navigation").on("click", function(){
         
     
-        $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>Department Details</p></div><div class="timestamps"><i class="fa fa-check-double m-1" style="font-size:8pt; color:#5C7AEA;"></i></div></div>';
+        $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>Navigation</p></div><div class="timestamps"><i class="fa fa-check-double m-1" style="font-size:8pt; color:#5C7AEA;"></i></div></div>';
         $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header"><p>Where should I redirect you to (Reply with option):<br>1.Open Tenders<br>2.Facilites<br>3.Services<br>4.Gallery</p></div><div class="timestamps"><p class="msg_time">0:00</p></div></div>';
         i++;
         
