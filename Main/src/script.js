@@ -352,12 +352,12 @@ function greetUser()
     }
     else if( hr >= 12 && hr < 17)
     {
-        greetmsg.innerHTML = "Good Afternoon User!<br>How can I help you today?";
+        greetmsg.innerHTML = "<b>Good Afternoon User!</b><br>How can I help you today?";
 
     }
     else
     {
-        greetmsg.innerHTML = "Good Evening User!<br>How can I help you today?";
+        greetmsg.innerHTML = "<b>Good Evening User!</b><br>How can I help you today?";
     }
     playMsgSound();
 
