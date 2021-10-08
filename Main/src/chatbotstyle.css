@@ -166,6 +166,7 @@
     margin-left: 8px;
 }
 
+
 #location p{
     border-color: #9b141f;
     color: #9b141f;
@@ -176,10 +177,7 @@
     border-color: #14279B;
 }
 
-#query
-{
-    margin-left:8px;
-}
+
 #query p{
     border-color: #48149b;
     color: #48149b;
@@ -188,6 +186,22 @@
     background-color:#5C7AEA;
     color:white;
     border-color: #14279B;
+}
+
+#navigation{
+    margin-left:8px;
+}
+#navigation p{
+    border-color: #9b1479;
+    color: #9b1479;
+}
+#navigation p:hover{
+    background-color:#5C7AEA;
+    color:white;
+    border-color: #14279B;
+}
+#contactUs{
+    margin-left:8px;
 }
 .form .inbox .options p:hover{
     background-color:#5C7AEA;
@@ -235,6 +249,16 @@
     margin-left: 8px;
 }
 
+#collapseBtn {
+
+    display: inline;
+}
+
+#restore_collapseBtn
+{
+    display: none;
+
+}
 /* Google Translate */
 /* #google_translate_element{
     width: 90px;

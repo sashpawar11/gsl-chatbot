@@ -50,12 +50,12 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'e
 				</div>
 				<!-- <div class="col"><div id="google_translate_element"></div></div> -->
 				<div class="col">
-					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="collapse" id="collapseBtn" style="visibility: visible;" ><i class="fa fa-minus" style="font-size: 8pt;"></i></button>
-					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Restore" id="restore_collapseBtn" style="visibility:hidden;" ><i class="fa fa-plus" style="font-size: 8pt;"></i></button>
+					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="collapse" id="collapseBtn"><i class="fa fa-minus" style="font-size: 8pt;"></i></button>
+					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Restore" id="restore_collapseBtn" ><i class="fa fa-chevron-up" style="font-size: 8pt;"></i></button>
 				</div>
 				<div class="col">
-					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Minimize" id="minbtn"><img src="img/minimize-ico.png" width="24" height="24"/></button>
-					<button type="button" class="btn btn-primary btn-sm controlBtns" id="maxbtn" aria-label="Maximize"><img src="img/fullsceen-ico.png" width="24" height="24"/></button>
+					<button type="button" class="btn btn-primary btn-sm controlBtns" aria-label="Minimize" id="minbtn"><i class="fa fa-compress" style="font-size: 10pt;"></i></button>
+					<button type="button" class="btn btn-primary btn-sm controlBtns" id="maxbtn" aria-label="Maximize"><i class="fa fa-expand" style="font-size: 10pt;"></i></button>
 				</div>
 				<div class="col"><button type="button" class="btn btn-primary btn-sm controlBtns" id="btn_close" aria-label="Close"><i class="fa fa-times"></i></button></div>
 				
@@ -85,8 +85,8 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'e
 			<div class="icon" style="visibility: hidden;">
 				<i class="fas fa-robot"></i>
 			</div>
-			<div class="options" id="contact">
-				<p><b>Contact Details</b></p>
+			<div class="options" id="dept">
+				<p><b>Department Details</b></p>
 			</div>
 			<div class="options" id="info">
 				<p><b>Info</b></p>
@@ -99,8 +99,22 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'e
 			<div class="options" id="location">
 				<p><b>Location</b></p>
 			</div>
+			
+			<div class="options" id="navigation">
+				<p><b>Navigation</b></p>
+			</div>
+			
+		</div>
+		<div class="bot-inbox inbox opt_inbox" >
+			<div class="icon" style="visibility: hidden;">
+				<i class="fas fa-robot"></i>
+			</div>
+			
 			<div class="options" id="query">
 				<p><b>Other Queries</b></p>
+			</div>
+			<div class="options" id="contactUs">
+				<p><b>ContactUs</b></p>
 			</div>
 			
 		</div>
@@ -119,7 +133,7 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'e
 </button>
 
 
-	<nav class="navbar navbar-expand-lg navbar-dark p-3" style="background-color: #14279B;" translate="no">
+	<nav class="navbar navbar-expand-lg navbar-dark p-3 fixed-top" style="background-color: #14279B;" translate="no">
 		<a class="navbar-brand ml-3" href="#"><img src="img/gsl-logo-light.png" class="img-fluid" alt="gslchatbot" height="40px" width="40px"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -132,7 +146,7 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'e
 		  </div>
 		</div>
 	  </nav>
-	  <section class="hero-banner bg-light py-5" translate="no">
+	  <section class="hero-banner bg-light py-5 mt-5" translate="no">
 		<div class="container">
 			<div class="row row align-items-center">
 				<div class="col-lg-5 offset-lg-1 order-lg-1 d-flex justify-content-center" style="align-items: flex-end;">
