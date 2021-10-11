@@ -1,33 +1,18 @@
 
 <?php
 
-//sql connection to database for getting contact details
+//sql connection to database
 $conn = mysqli_connect("localhost", "root", "", "gslchatbot") or die("Database Connection Error!");
 
 $getAns = mysqli_real_escape_string($conn,$_POST['text']);
 
-$check_query = "SELECT dept_name, dept_email, dept_phone FROM department_details WHERE opt_id LIKE '%$getAns%'";
+$check_query = "SELECT link FROM navigation WHERE opt_id LIKE '%$getAns%'";
 $execute_query = mysqli_query($conn,$check_query) or die("Error while executing query!");
 
 if(mysqli_num_rows($execute_query) > 0){
     $fetch_data = mysqli_fetch_assoc($execute_query);
-
-    echo "
-    <div class='bot-inbox inbox'>
-        <div class='icon'>
-            <img src='img/bot.png' width='24' height='24'>
-            <span>GslBot</span>
-        </div>
-        <div class='msg-header'>
-            <span>GslBot</span>
-            <p>Department Name:<br>{$fetch_data['dept_name']}<br>
-             Department Email:<br>{$fetch_data['dept_email']}<br>
-            Department Phone:<br>{$fetch_data['dept_phone']}<br></p>
-        </div>
-        <div class='timestamps'><br><br><p class='msg_time'>0:00</p></div>
-    </div>";
-
-   //echo $reply;
+    $reply = $fetch_data['link'];
+    echo $reply;
 }else{ 
 
         // When a user will ask a question which the bot cannot answer,

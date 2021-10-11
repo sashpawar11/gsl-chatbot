@@ -7,7 +7,7 @@
 }
 .wrapper{
     width: 360px;
-    background: #fff;
+    background: #f7f7f7;
     /* border-radius: 5px; */
     /* border: 1px solid transparent; */
     border: none;
@@ -56,22 +56,36 @@
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    font-size: 18px;
     background: #3D56B2;
+    
 }
+
 .wrapper .form .inbox .msg-header{
     max-width: 65%;
     margin-left: 10px;
 }
 .form .inbox .msg-header p{
     color: #1d1d1d;
-    background: #f1f1f1;
+    background: white;
     border-radius: 10px;
     padding: 8px 10px;
     font-size: 14px;
     word-break: break-all;
+    box-shadow:
+                2.8px 7.8px 5.3px rgba(61, 86, 178, 0.02),
+                9.4px 26.1px 17.9px rgba(61, 86, 178, 0.03),
+                42px 117px 80px rgba(61, 86, 178, 0.05)
+;
+
     
 }
+
+.form .inbox .msg-header span{
+    font-size: 10pt;
+    color: #757575;
+}
+
+
 .form .user-inbox .msg-header p{
     color: white;
     background: #3D56B2;
@@ -101,9 +115,16 @@
     font-size: 15px;
     background: #fff;
     transition: all 0.3s ease;
+    box-shadow:
+  2.8px 7.8px 5.3px rgba(0, 0, 0, 0.02),
+  9.4px 26.1px 17.9px rgba(0, 0, 0, 0.03),
+  42px 117px 80px rgba(0, 0, 0, 0.05)
+;
+
 }
 .typing-field .input-data input:focus{
     border-color: #3D56B2;
+    filter: drop-shadow(5px 5px 10px #3d56b283);
 }
 .input-data input::placeholder{
     color: #999999;
@@ -164,6 +185,10 @@
     word-break: break-all;
     cursor: pointer;
     margin-left: 8px;
+    box-shadow:
+                2.8px 7.8px 5.3px rgba(61, 86, 178, 0.02),
+                9.4px 26.1px 17.9px rgba(61, 86, 178, 0.03),
+                42px 117px 80px rgba(61, 86, 178, 0.05)
 }
 
 
@@ -234,10 +259,13 @@
 }
 
 
+.form .inbox .timestamps
+{
+  top:10;
+}
 .form .inbox .timestamps p{
 
-    padding-top: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 7pt;
     color: rgb(175, 175, 175);
     
