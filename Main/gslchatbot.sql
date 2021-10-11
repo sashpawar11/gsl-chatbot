@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2021 at 09:01 AM
+-- Generation Time: Oct 11, 2021 at 08:53 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -61,7 +61,7 @@ CREATE TABLE `knowledge_base` (
 
 INSERT INTO `knowledge_base` (`id`, `questions`, `answers`) VALUES
 (1, 'Hello', 'Hi!'),
-(2, 'What is your name?', 'My name is GSL-chatbot'),
+(2, 'What is your name?', 'My name is GslBot!'),
 (3, 'Hi', 'Hello!'),
 (4, 'Thanks|Thank you|Thankyou', 'It was great helping you, goodbye user!'),
 (5, 'Who is the current cmd? | CMD | Who is the head | Current CMD | cmd', 'Cmde B.B. Nagpal, NM,IN(Retd) - Chairman & Managing Director');
@@ -77,6 +77,16 @@ CREATE TABLE `navigation` (
   `header` varchar(200) NOT NULL,
   `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `navigation`
+--
+
+INSERT INTO `navigation` (`opt_id`, `header`, `link`) VALUES
+(1, 'Open Tenders', 'https://goashipyard.in/tender/open-tender/'),
+(2, 'Facilites', 'https://goashipyard.in/facilities/'),
+(3, 'Services', 'https://goashipyard.in/services/'),
+(4, 'Careers', 'https://goashipyard.in/careers/advertisement/');
 
 -- --------------------------------------------------------
 
@@ -96,7 +106,13 @@ CREATE TABLE `newqueries` (
 INSERT INTO `newqueries` (`ID`, `que`) VALUES
 (7, 'What is your name '),
 (9, 'What is your age'),
-(25, 'What is your name!');
+(25, 'What is your name!'),
+(26, 'Yo'),
+(27, 'Hello'),
+(28, '3'),
+(29, '2'),
+(30, 'Hello'),
+(31, 'Hello');
 
 --
 -- Indexes for dumped tables
@@ -140,7 +156,7 @@ ALTER TABLE `knowledge_base`
 -- AUTO_INCREMENT for table `newqueries`
 --
 ALTER TABLE `newqueries`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
