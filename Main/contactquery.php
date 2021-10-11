@@ -16,7 +16,7 @@ if(mysqli_num_rows($execute_query) > 0){
     <div class='bot-inbox inbox'>
         <div class='icon'>
             <img src='img/bot.png' width='24' height='24'>
-            <span>GslBot</span>
+            
         </div>
         <div class='msg-header'>
             <span>GslBot</span>

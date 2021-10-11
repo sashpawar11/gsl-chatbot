@@ -74,8 +74,7 @@
     box-shadow:
                 2.8px 7.8px 5.3px rgba(61, 86, 178, 0.02),
                 9.4px 26.1px 17.9px rgba(61, 86, 178, 0.03),
-                42px 117px 80px rgba(61, 86, 178, 0.05)
-;
+                42px 117px 80px rgba(61, 86, 178, 0.05);
 
     
 }
@@ -232,6 +231,7 @@
     background-color:#5C7AEA;
     color:white;
     border-color: #14279B;
+    filter: drop-shadow(5px 5px 10px #3d56b283);
 }
 
 .controlBtns{

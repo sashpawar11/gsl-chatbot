@@ -198,7 +198,7 @@ $(document).ready(function(){
     $("#contactUs").on("click", function(){
 
         $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>Contact Us</p></div><div class="timestamps"><i class="fa fa-check-double m-1" style="font-size:8pt; color:#5C7AEA;"></i></div></div>';
-        $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header" style="max-width: 68%;"><span>GslBot</span><p>VASCO-DA-GAMA, GOA <br>-403802 </p><p>Phone: <br>+91-832-2512152 (5 LINES/ 2513954 / 2512359 </p><p>Email:<a href="mailto:contactus@goashipyard.com"  >contactus@goashipyard.com</a></p></div><div class="timestamps"><br><br><p class="msg_time">0:00</p></div></div>';
+        $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header" style="max-width: 68%;"><span>GslBot</span><p>Address: Vasco-Da-Gama, Goa<br>-403802 </p><p>Phone: <br>+91-832-2512152 <br>(5 LINES/ 2513954 / 2512359 </p><p>Email:<a href="mailto:contactus@goashipyard.com"  >contactus@goashipyard.com</a></p></div><div class="timestamps"><br><br><p class="msg_time">0:00</p></div></div>';
         i++;
         getLoaderAnimation($msg,$reply);
         setTimeout(function(){
@@ -346,7 +346,8 @@ $(document).ready(function(){
             // top: "+=0",
             width: '100%',
             bottom: "0",
-            right: "0",         
+            right: "0", 
+                    
             
           }, {
               duration: 20,
@@ -358,6 +359,7 @@ $(document).ready(function(){
           $(this).css('display', 'none');
           $("#minbtn").css('display', 'inline-block');
           $(".input-data").css('width','600px');
+        //   $(".form .inbox .msg-header p").css('font-size','16px');
           document.getElementsByClassName('navbar')[0].classList.remove('fixed-top');
           document.body.style.overflow = 'hidden'; // Locking Body Scroll
          
