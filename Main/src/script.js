@@ -57,7 +57,7 @@ $(document).ready(function(){
                         i++;
                         $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header"><span>GslBot</span><p>'+ result +'</p></div><div class="timestamps"><br><br><p class="msg_time">0:00</p></div></div>';
                         $(".form").append($reply);
-                        playMsgSound();
+                        
                         setTimeStamp(i);
                         
                         $(".form").scrollTop($(".form")[0].scrollHeight);
@@ -90,7 +90,7 @@ $(document).ready(function(){
                     i++;
                     $(".form").append($reply);
                     $(".form").scrollTop($(".form")[0].scrollHeight);
-                    playMsgSound();
+                   
                     setTimeStamp(i);
                     contactMode = false;
                     normalMode = true;
@@ -120,7 +120,7 @@ $(document).ready(function(){
                     i++;
                     $(".form").append($reply);
                     $(".form").scrollTop($(".form")[0].scrollHeight);
-                    playMsgSound();
+                    
                     setTimeStamp(i);
                     navMode = false;
                     normalMode = true;
@@ -442,7 +442,7 @@ function greetUser()
     {
         greetmsg.innerHTML = "<b>Good Evening User!</b><br>How can I help you today?";
     }
-    playMsgSound();
+    
 
 
 }
@@ -458,7 +458,7 @@ function getLoaderAnimation($msg,$reply)
 
     setTimeout(function(){
         $(".form").append($reply);
-        playMsgSound();
+        
     }, 1500);
 
 }
@@ -488,8 +488,3 @@ function autoResizeWrapper()
 
 }
 
-function playMsgSound()
-{
-
-    // document.getElementById("msg_notif").play();
-}
