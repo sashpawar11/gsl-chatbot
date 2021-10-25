@@ -26,6 +26,7 @@ $(document).ready(function(){
    
     $("#send-btn").on("click", function(){
         
+        
         $value = $("#data").val().trim();  // Removing Whitespaces around input-data string.
         $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>'+ $value +'</p></div><div class="timestamps"><i class="fa fa-check-double m-1" style="font-size:8pt; color:#5C7AEA;"></i></div></div>';
         // $loader = '<div class="loader"></div>';
@@ -57,7 +58,7 @@ $(document).ready(function(){
                         i++;
                         $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header"><span>GslBot</span><p>'+ result +'</p></div><div class="timestamps"><br><br><p class="msg_time">0:00</p></div></div>';
                         $(".form").append($reply);
-                        
+                        msgAlertSound();
                         setTimeStamp(i);
                         
                         $(".form").scrollTop($(".form")[0].scrollHeight);
@@ -89,6 +90,7 @@ $(document).ready(function(){
                     $reply = result;
                     i++;
                     $(".form").append($reply);
+                    msgAlertSound();
                     $(".form").scrollTop($(".form")[0].scrollHeight);
                    
                     setTimeStamp(i);
@@ -119,6 +121,7 @@ $(document).ready(function(){
                     $reply = '<div class="bot-inbox inbox"><div class="icon"><img src="img/bot.png" width="24" height="24"></div><div class="msg-header"><span>GslBot</span><p><a href="' + result + '" class="link-success" target="_blank">Click Here</a></p></div><div class="timestamps"><br><br><p class="msg_time">0:00</p></div></div>';
                     i++;
                     $(".form").append($reply);
+                    msgAlertSound();
                     $(".form").scrollTop($(".form")[0].scrollHeight);
                     
                     setTimeStamp(i);
@@ -457,6 +460,7 @@ function getLoaderAnimation($msg,$reply)
     $('.loader').delay(700).fadeOut();
 
     setTimeout(function(){
+        msgAlertSound();
         $(".form").append($reply);
         
     }, 1500);
@@ -488,3 +492,11 @@ function autoResizeWrapper()
 
 }
 
+
+function msgAlertSound()
+{
+
+    var sound = new Audio("sound/alert.mp3");
+    sound.play();
+    sound.currentTime = 0;
+}
