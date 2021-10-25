@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2021 at 05:38 AM
+-- Generation Time: Oct 25, 2021 at 09:05 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -107,11 +107,7 @@ INSERT INTO `newqueries` (`ID`, `que`) VALUES
 (7, 'What is your name '),
 (9, 'What is your age'),
 (25, 'What is your name!'),
-(26, 'Yo'),
 (27, 'Hello'),
-(28, '3'),
-(29, '2'),
-(30, 'Hello'),
 (31, 'Hello');
 
 --
